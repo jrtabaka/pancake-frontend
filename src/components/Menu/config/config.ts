@@ -6,32 +6,16 @@ export type ConfigMenuItemsType = MenuItemsType & { hideSubNav?: boolean }
 
 const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
   {
-    label: t('Trade'),
-    icon: 'Swap',
-    href: '/swap',
-    showItemsOnMobile: false,
-    items: [
-      {
-        label: t('Exchange'),
-        href: '/swap',
-      },
-      {
-        label: t('Liquidity'),
-        href: '/liquidity',
-      },
-    ],
-  },
-  {
     label: t('Earn'),
     href: '/farms',
     icon: 'Earn',
     items: [
       {
-        label: t('Farms'),
+        label: t('Doubles Vaults'),
         href: '/farms',
       },
       {
-        label: t('Pools'),
+        label: t('Singles Vaults'),
         href: '/pools',
       },
     ],
@@ -42,35 +26,12 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
     icon: 'Trophy',
     items: [
       {
-        label: t('Trading Competition'),
-        href: '/competition',
-      },
-      {
-        label: t('Prediction (BETA)'),
+        label: t('Lottery Bantu'),
         href: '/prediction',
       },
       {
-        label: t('Lottery'),
+        label: t('Lottery Else'),
         href: '/lottery',
-      },
-    ],
-  },
-  {
-    label: t('NFT'),
-    href: `${nftsBaseUrl}`,
-    icon: 'Nft',
-    items: [
-      {
-        label: t('Overview'),
-        href: `${nftsBaseUrl}`,
-      },
-      {
-        label: t('Collections'),
-        href: `${nftsBaseUrl}/collections`,
-      },
-      {
-        label: t('Activity'),
-        href: `${nftsBaseUrl}/activity`,
       },
     ],
   },
@@ -85,19 +46,11 @@ const config: (t: ContextApi['t']) => ConfigMenuItemsType[] = (t) => [
         href: '/info',
       },
       {
-        label: t('IFO'),
-        href: '/ifo',
-      },
-      {
         label: t('Voting'),
         href: '/voting',
       },
       {
         type: DropdownMenuItemType.DIVIDER,
-      },
-      {
-        label: t('Leaderboard'),
-        href: '/teams',
       },
       {
         type: DropdownMenuItemType.DIVIDER,
