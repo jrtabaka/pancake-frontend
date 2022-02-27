@@ -17,16 +17,6 @@ export const vaultPoolConfig = {
       secondarySrc: '/images/tokens/autorenew.svg',
     },
   },
-  [VaultKey.IfoPool]: {
-    name: 'IFO CAKE',
-    description: <Trans>Stake CAKE to participate in IFOs</Trans>,
-    autoCompoundFrequency: 1,
-    gasLimit: 500000,
-    tokenImage: {
-      primarySrc: `/images/tokens/${tokens.cake.address}.svg`,
-      secondarySrc: `/images/tokens/ifo-pool-icon.svg`,
-    },
-  },
 } as const
 
 const pools: SerializedPoolConfig[] = [
@@ -43,36 +33,6 @@ const pools: SerializedPoolConfig[] = [
     tokenPerBlock: '10',
     sortOrder: 1,
     isFinished: false,
-  },
-  {
-    sousId: 266,
-    stakingToken: serializedTokens.cake,
-    earningToken: serializedTokens.thg,
-    contractAddress: {
-      97: '',
-      56: '0xD1D03A3D4C27884a8703Cdb78504737C9E9A159e',
-    },
-    poolCategory: PoolCategory.CORE,
-    harvest: true,
-    sortOrder: 999,
-    tokenPerBlock: '0.162',
-    deployedBlockNumber: 15354343,
-    version: 3,
-  },
-  {
-    sousId: 265,
-    stakingToken: serializedTokens.cake,
-    earningToken: serializedTokens.era,
-    contractAddress: {
-      97: '',
-      56: '0x260F95f5b7FD8eda720ED9d0829164dE35B048ab',
-    },
-    poolCategory: PoolCategory.CORE,
-    harvest: true,
-    sortOrder: 999,
-    tokenPerBlock: '1.608',
-    deployedBlockNumber: 15352472,
-    version: 3,
   },
   {
     sousId: 264,
@@ -3527,34 +3487,7 @@ const pools: SerializedPoolConfig[] = [
     sortOrder: 999,
     isFinished: true,
   },
-  {
-    sousId: 248,
-    stakingToken: serializedTokens.cake,
-    earningToken: serializedTokens.ccar,
-    contractAddress: {
-      97: '',
-      56: '0x9e31aef040941E67356519f44bcA07c5f82215e5',
-    },
-    poolCategory: PoolCategory.CORE,
-    harvest: true,
-    sortOrder: 999,
-    tokenPerBlock: '0.6093',
-  },
-  {
-    sousId: 262,
-    stakingToken: serializedTokens.cake,
-    earningToken: serializedTokens.ach,
-    contractAddress: {
-      97: '',
-      56: '0xD5668e936B951292Ddf8c84553CC58F85948F816',
-    },
-    poolCategory: PoolCategory.CORE,
-    harvest: true,
-    enableEmergencyWithdraw: true,
-    sortOrder: 999,
-    tokenPerBlock: '7.502',
-    deployedBlockNumber: 15150333,
-  },
+
 ].filter((p) => !!p.contractAddress[CHAIN_ID])
 
 export default pools
